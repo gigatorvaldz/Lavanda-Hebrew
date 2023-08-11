@@ -1,0 +1,85 @@
+@import "@/styles/abstracts";
+
+.title {
+  color: $primary-color-1;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0em;
+  margin-bottom: 30px;
+
+  @include maxQ("xLarge") {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  @include maxQ("medium") {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 7px;
+  }
+
+  @include maxQ("mobile") {
+    font-size: 8px;
+    line-height: 11px;
+    margin-bottom: 5px;
+  }
+}
+
+.list {
+  & > li {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+
+    padding-right: 43px;
+
+    background: url("../../assets/listItem.svg") no-repeat right center;
+
+    @include maxQ("xLarge") {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include maxQ("medium") {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include maxQ("tablet-s") {
+      font-size: 12px;
+      line-height: 14px;
+
+      padding-right: 9px;
+      background: url("../../assets/ListItemMobile.svg") no-repeat right center;
+    }
+
+    @include maxQ("mobile") {
+      font-size: 8px;
+      line-height: 11px;
+
+      padding-right: 9px;
+      background: url("../../assets/ListItemMobile.svg") no-repeat right center;
+    }
+  }
+
+  & > li:not(:first-child) {
+    margin-top: 10px;
+
+    @include maxQ("xLarge") {
+      margin-top: 3px;
+    }
+
+    @include maxQ("tablet-s") {
+      margin-top: 0px;
+    }
+  }
+}

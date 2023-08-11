@@ -1,0 +1,91 @@
+@import "@/styles/abstracts";
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  color: $primary-color-2;
+  line-height: 68px;
+}
+
+.QuestionsSection {
+  background-color: $primary-color-3;
+  .wrapper {
+    padding: 0 165px 117px 102px;
+    position: relative;
+    .heading {
+      text-align: center;
+      padding: 56px 0 78px 0;
+    }
+
+    .picture {
+      position: absolute;
+      z-index: 0;
+      top: 90px;
+      left: 129px;
+    }
+
+    .questionList {
+      position: relative;
+      z-index: 1;
+
+      & > *:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      .first {
+        max-width: 940px;
+      }
+
+      .second {
+        max-width: 1126px;
+      }
+
+      & > div p {
+        max-width: 1156px;
+      }
+    }
+  }
+}
+
+@include maxQ("xLarge") {
+  .heading {
+    font-size: 32px;
+  }
+
+  .QuestionsSection {
+    background-color: $primary-color-3;
+    .wrapper {
+      padding: 0 55px 67px 55px;
+      position: relative;
+      .heading {
+        text-align: center;
+        padding: 36px 0 58px 0;
+      }
+    }
+  }
+
+  .picture {
+    display: none;
+  }
+}
+
+@include maxQ("mobile") {
+  .QuestionsSection {
+    .wrapper {
+      padding: 0 22px 34px 22px;
+      .heading {
+        padding: 15px 0 23px 0;
+      }
+
+      .questionList {
+        & > *:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .picture {
+    display: none;
+  }
+}

@@ -1,0 +1,143 @@
+@import "@/styles/abstracts";
+
+.container {
+  color: $primary-color-1;
+
+  .controls {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-color-2;
+    }
+
+    .label {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 54px;
+      letter-spacing: 0em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      user-select: none;
+
+      background: url("../../assets/questionicon.svg") no-repeat right center;
+      padding-right: 62px;
+    }
+
+    & > *:not(:first-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .children {
+    overflow: hidden;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    padding-right: 62px;
+    margin-top: 6px;
+
+    &.active {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include maxQ("xLarge") {
+  .container {
+    .controls {
+      .label {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 55px;
+        letter-spacing: 0em;
+
+        padding-right: 62px;
+      }
+
+      & > *:not(:first-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .children {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 48px;
+
+      padding-right: 62px;
+      margin-top: 6px;
+
+      &.active {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include maxQ("tablet-s") {
+  .container {
+    .controls {
+      .label {
+        font-size: 14px;
+        line-height: 20px;
+
+        padding-right: 12px;
+        background: url("../../assets/questionicon-small.svg") no-repeat right
+          center;
+      }
+
+      & > *:not(:first-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .children {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 11px;
+      
+      padding-right: 12px;
+      margin-top: 6px;
+
+      &.active {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include maxQ("mobile") {
+  .container {
+    .controls {
+      .label {
+        font-size: 9px;
+        line-height: 12px;
+
+        padding-right: 12px;
+        background: url("../../assets/questionicon-small.svg") no-repeat right
+          center;
+      }
+
+      & > *:not(:first-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .children {
+      font-size: 8px;
+      line-height: 11px;
+      
+      padding-right: 12px;
+      margin-top: 6px;
+
+      &.active {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "@/styles/abstracts";
+
+.container {
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: $primary-color-2;
+    line-height: 68px;
+  }
+}
+
+@include maxQ("tablet-s") {
+  .container {
+    h2 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
